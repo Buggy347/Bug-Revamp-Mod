@@ -1,0 +1,1281 @@
+focus_tree = { 
+id = BELGIUM
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = BEL 
+} 
+} 
+#Focus for Maintain Influence
+focus = { 
+id = BEL_maintaininfluence
+icon = GFX_goal_tripartite_pact
+x = 24
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_refocusresources } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+BRD = {
+add_opinion_modifier= { 
+target = BEL
+modifier = medium_increase
+}
+}
+RWA = {
+add_opinion_modifier= { 
+target = BEL
+modifier = medium_increase
+}
+}
+COG = {
+add_opinion_modifier= { 
+target = BEL
+modifier = medium_increase
+}
+}
+ } 
+
+ } 
+
+#Focus for Defend the Colonies
+focus = { 
+id = BEL_defendthecolonies
+icon = GFX_goal_generic_fortify_city
+x = 26
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_improvethecolonies } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+295 = {
+add_building_construction= { 
+type = bunker 
+province = 10968
+level = 2 
+instant_build = yes }
+
+add_building_construction= { 
+type = bunker 
+province = 12925
+level = 2 
+instant_build = yes }
+
+add_building_construction= { 
+type = bunker 
+province = 5117
+level = 2 
+instant_build = yes }
+}
+ } 
+
+ } 
+
+#Focus for Refocus Resources
+focus = { 
+id = BEL_refocusresources
+icon = GFX_goal_generic_production2
+x = 24
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_decolonizeafrica } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_manpower= 1000
+add_political_power= 100
+ } 
+
+ } 
+
+#Focus for Improve the Colonies
+focus = { 
+id = BEL_improvethecolonies
+icon = GFX_goal_generic_construct_infrastructure
+x = 26
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_keepourcolonies } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+295 = {
+add_building_construction= { 
+type = infastructure
+level = 10 
+instant_build = yes }
+}
+538 = {
+add_building_construction= { 
+type = infastructure
+level = 10 
+instant_build = yes }
+}
+718 = {
+add_building_construction= { 
+type = infastructure
+level = 10 
+instant_build = yes }
+}
+ } 
+
+ } 
+
+#Focus for Industrial Superpower
+focus = { 
+id = BEL_industrialsuperpower
+icon = GFX_goal_continuous_repairments
+x = 13
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_buildmorefactories } 
+prerequisite = { focus = BEL_researchnewindustrialprocesses } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_offsite_building= { type = arms_factory level = 1 }
+add_offsite_building= { type = arms_factory level = 1 }
+add_offsite_building= { type = arms_factory level = 1 }
+add_offsite_building= { type = industrial_complex level = 1 }
+add_offsite_building= { type = industrial_complex level = 1 }
+add_offsite_building= { type = industrial_complex level = 1 }
+ } 
+
+ } 
+
+#Focus for Research New Industrial Processes
+focus = { 
+id = BEL_researchnewindustrialprocesses
+icon = GFX_goal_generic_consumer_goods
+x = 11
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_improvedroads } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 10
+category = industry
+}
+ } 
+
+ } 
+
+#Focus for Keep our Colonies
+focus = { 
+id = BEL_keepourcolonies
+icon = GFX_goal_generic_air_doctrine
+x = 26
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_thecolonyquestion } 
+mutually_exclusive = { focus = BEL_decolonizeafrica } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability= 0.10
+ } 
+
+ } 
+
+#Focus for Research Next-Gen Airplanes
+focus = { 
+id = BEL_researchnextgenairplanes
+icon = GFX_goal_generic_air_fighter2
+x = 1
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_researchgermanairtatics } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 8
+category = medium_air
+}
+ } 
+
+ } 
+
+#Focus for Research German Air Tatics
+focus = { 
+id = BEL_researchgermanairtatics
+icon = GFX_goal_generic_occupy_states_ongoing_war
+x = 1
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_copytheluftwaffe } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = air_doctrine
+}
+ } 
+
+ } 
+
+#Focus for Massive Naval Expansion
+focus = { 
+id = BEL_massivenavalexpansion
+icon = GFX_goal_generic_navy_battleship
+x = 3
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_researchnewnavaldoctrines } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+6 = {
+add_building_construction= { 
+type = dockyard
+level = 2 
+instant_build = yes }
+add_building_construction= { 
+type = dockyard
+level = 2 
+instant_build = yes }
+}
+ } 
+
+ } 
+
+#Focus for Copy the Panzers
+focus = { 
+id = BEL_copythepanzers
+icon = GFX_goal_generic_army_tanks
+x = 5
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_newarmydoctrines } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 1.0
+uses = 4 
+category = armor 
+}
+ } 
+
+ } 
+
+#Focus for New Infantry Equipment
+focus = { 
+id = BEL_newinfantryequipment
+icon = GFX_goal_rhineland
+x = 5
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_recruitmentpropaganda } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.75
+uses = 6
+category = infantry_weapons
+}
+ } 
+
+ } 
+
+#Focus for New Trade Deals
+focus = { 
+id = BEL_newtradedeals
+icon = GFX_goal_generic_positive_trade_relations
+x = 20
+y = 2
+cost = 7
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_globalpolitics } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power= 300
+ } 
+
+ } 
+
+#Focus for Better Planes
+focus = { 
+id = BEL_betterplanes
+icon = GFX_goal_generic_air_fighter2
+x = 23
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_stopthelufwaffe } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = naval_bomber 
+}
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = air_doctrine
+}
+ } 
+
+ } 
+
+#Focus for Recruitment Propaganda
+focus = { 
+id = BEL_recruitmentpropaganda
+icon = GFX_focus_generic_military_academy
+x = 3
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_jointheaxis } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_manpower= 10000
+ } 
+
+ } 
+
+#Focus for Join the Comintern
+focus = { 
+id = BEL_jointhecomintern
+icon = GFX_focus_chi_cooperation_with_the_communists
+x = 10
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_befriendtheussr } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+SOV = {
+country_event= {
+days = 1 
+id = bugswwiirevampmod.7 
+}
+}
+ } 
+
+ } 
+
+#Focus for Don't Jump the Gun
+focus = { 
+id = BEL_dontjumpthegun
+icon = GFX_goal_generic_defence
+x = 15
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_pleadtotheallies } 
+mutually_exclusive = { focus = BEL_rapidrearmment } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_manpower= 15000
+ } 
+
+ } 
+
+#Focus for Research New Naval Doctrines
+focus = { 
+id = BEL_researchnewnavaldoctrines
+icon = GFX_goal_generic_navy_doctrines_tactics
+x = 3
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_builduboats } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = naval_doctrine
+}
+ } 
+
+ } 
+
+#Focus for Build U-Boats
+focus = { 
+id = BEL_builduboats
+icon = GFX_goal_generic_navy_submarine
+x = 3
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_recruitmentpropaganda } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = ss_tech
+}
+ } 
+
+ } 
+
+#Focus for Improve the Infantry
+focus = { 
+id = BEL_improvetheinfantry
+icon = GFX_goal_rhineland
+x = 19
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_researchnewdoctorines } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_manpower= 80000
+ } 
+
+ } 
+
+#Focus for New Tanks
+focus = { 
+id = BEL_newtanks
+icon = GFX_goal_generic_army_tanks
+x = 19
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_improvetheinfantry } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = armor
+}
+ } 
+
+ } 
+
+#Focus for Stop the Lufwaffe
+focus = { 
+id = BEL_stopthelufwaffe
+icon = GFX_goal_generic_air_fighter2
+x = 23
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_jointheallies } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_ace= {
+name = 'Remi' 
+surname = 'Van Lierde' 
+callsign = 'FiveZero' 
+type = fighter_genius 
+is_female = no
+}
+ } 
+
+ } 
+
+#Focus for Research New Doctorines
+focus = { 
+id = BEL_researchnewdoctorines
+icon = GFX_focus_hol_the_foundations_of_defense
+x = 19
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_mobilizeagainstfascists } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 4 
+category = land_doctrine
+}
+ } 
+
+ } 
+
+#Focus for Fend off the U-Boats
+focus = { 
+id = BEL_fendofftheuboats
+icon = GFX_focus_generic_cruiser2
+x = 21
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_jointheallies } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+6 = {
+add_building_construction= { 
+type = dockyard 
+level = 4
+instant_build = yes }
+
+add_building_construction= { 
+type = dockyard 
+level = 4
+instant_build = yes }
+}
+ } 
+
+ } 
+
+#Focus for Fortify Enemy Borders
+focus = { 
+id = BEL_fortifyenemyborders
+icon = GFX_goal_generic_construct_military
+x = 6
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_jointheaxis } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+6 = {
+add_building_construction = { 
+type = bunker 
+province = 6446
+level = 2 
+instant_build = yes }
+
+add_building_construction = { 
+type = bunker 
+province = 3576
+level = 2 
+instant_build = yes }
+}
+
+34 = {
+add_building_construction = { 
+type = bunker 
+province = 9536
+level = 2 
+instant_build = yes }
+
+add_building_construction = { 
+type = bunker 
+province = 1308
+level = 2 
+instant_build = yes }
+
+add_building_construction = { 
+type = bunker 
+province = 9444
+level = 2 
+instant_build = yes }
+
+add_building_construction = { 
+type = bunker 
+province = 9418
+level = 2 
+instant_build = yes }
+}
+ } 
+
+ } 
+
+#Focus for Rapid Rearmment
+focus = { 
+id = BEL_rapidrearmment
+icon = GFX_goal_generic_small_arms
+x = 13
+y = 2
+cost = 4
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_pleadtotheallies } 
+mutually_exclusive = { focus = BEL_dontjumpthegun } 
+ai_will_do = { 
+ factor = 2
+ } 
+completion_reward = { 
+add_war_support= 0.15
+add_offsite_building= { type = arms_factory level = 1 }
+ } 
+
+ } 
+
+#Focus for Evacuate Across the English Channel
+focus = { 
+id = BEL_evacuateacrosstheenglishchannel
+icon = GFX_goal_generic_construct_naval_dockyard
+x = 17
+y = 6
+cost = 7
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_18daycampaign } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+6 = {
+add_building_construction= { 
+type = naval_base
+province = 6446 
+level = 3
+instant_build = yes }
+}
+ } 
+
+ } 
+
+#Focus for The German Question
+focus = { 
+id = BEL_thegermanquestion
+icon = GFX_goal_generic_propaganda
+x = 10
+y = 0
+cost = 6
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_political_power= 90
+ } 
+
+ } 
+
+#Focus for Mobilize Against Fascists
+focus = { 
+id = BEL_mobilizeagainstfascists
+icon = GFX_goal_generic_propaganda
+x = 19
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_jointheallies } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_manpower= 8000 
+add_political_power= 80 
+add_war_support= 0.15
+ } 
+
+ } 
+
+#Focus for Build our Defenses
+focus = { 
+id = BEL_buildourdefenses
+icon = GFX_goal_generic_construct_military
+x = 17
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_jointheallies } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+34 = {
+add_building_construction= { 
+type = bunker 
+province = 3488
+level = 3
+instant_build = yes }
+}
+ } 
+
+ } 
+
+#Focus for 18 Day Campaign
+focus = { 
+id = BEL_18daycampaign
+icon = GFX_goal_generic_attack_allies
+x = 17
+y = 5
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_buildourdefenses } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+GER = {
+has_war = yes
+}
+ } 
+completion_reward = { 
+add_manpower= 200000
+create_wargoal= { 
+type = annex_everything 
+target = GER
+}
+ } 
+
+ } 
+
+#Focus for Global Politics
+focus = { 
+id = BEL_globalpolitics
+icon = GFX_goal_generic_intelligence_exchange
+x = 20
+y = 1
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power= 200
+ } 
+
+ } 
+
+#Focus for Befriend Germany
+focus = { 
+id = BEL_befriendgermany
+icon = GFX_goal_support_fascism
+x = 4
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_thegermanquestion } 
+mutually_exclusive = { focus = BEL_pleadtotheallies } 
+mutually_exclusive = { focus = BEL_befriendtheussr } 
+ai_will_do = { 
+ factor = 1
+ } 
+bypass = { 
+has_war_with= GER
+ } 
+completion_reward = { 
+GER = {
+add_opinion_modifier= { 
+target = BEL 
+modifier = large_increase 
+}
+}
+ } 
+
+ } 
+
+#Focus for Decolonize Africa
+focus = { 
+id = BEL_decolonizeafrica
+icon = GFX_goal_continuous_increase_nu
+x = 24
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_thecolonyquestion } 
+mutually_exclusive = { focus = BEL_keepourcolonies } 
+ai_will_do = { 
+ factor = -5
+ } 
+completion_reward = { 
+release= COG 
+release= RWA
+release= BRD
+ } 
+
+ } 
+
+#Focus for Recover our Military Factories
+focus = { 
+id = BEL_recoverourmilitaryfactories
+icon = GFX_goal_generic_construct_mil_factory
+x = 15
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_plandeman } 
+ai_will_do = { 
+ factor = 2
+ } 
+completion_reward = { 
+add_offsite_building= { type = arms_factory level = 1 }
+add_offsite_building= { type = arms_factory level = 1 }
+ } 
+
+ } 
+
+#Focus for Build more Factories
+focus = { 
+id = BEL_buildmorefactories
+icon = GFX_goal_generic_construct_civilian
+x = 14
+y = 6
+cost = 12
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_recoverourcivillianfactories } 
+prerequisite = { focus = BEL_recoverourmilitaryfactories } 
+ai_will_do = { 
+ factor = 2
+ } 
+completion_reward = { 
+add_offsite_building= { type = arms_factory level = 1 }
+add_offsite_building= { type = arms_factory level = 1 }
+add_offsite_building= { type = industrial_complex level = 1 }
+add_offsite_building= { type = industrial_complex level = 1 }
+ } 
+
+ } 
+
+#Focus for Join the Allies
+focus = { 
+id = BEL_jointheallies
+icon = GFX_focus_eng_the_sun_never_sets
+x = 14
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_dontjumpthegun focus = BEL_rapidrearmment } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+ENG = {
+country_event = {
+days = 1
+id = bugswwiirevampmod.3
+}
+}
+ } 
+
+ } 
+
+#Focus for Join the Axis
+focus = { 
+id = BEL_jointheaxis
+icon = GFX_goal_generic_forceful_treaty
+x = 4
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_befriendgermany } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+is_in_faction= no
+ } 
+completion_reward = { 
+GER = {
+country_event = {
+days = 1
+id = bugswwiirevampmod.1
+}
+}
+ } 
+
+ } 
+
+#Focus for Plan de Man
+focus = { 
+id = BEL_plandeman
+icon = GFX_focus_generic_industry_3
+x = 14
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_jointheallies focus = BEL_fiveyearplan } 
+ai_will_do = { 
+ factor = 3
+ } 
+completion_reward = { 
+add_stability= 0.15
+add_offsite_building= { type = arms_factory level = 1 }
+add_offsite_building= { type = industrial_complex level = 1 }
+ } 
+
+ } 
+
+#Focus for Recover our Civillian Factories
+focus = { 
+id = BEL_recoverourcivillianfactories
+icon = GFX_goal_generic_construct_civ_factory
+x = 13
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_plandeman } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_offsite_building= { type = industrial_complex level = 1 }add_offsite_building= { type = industrial_complex level = 1 }
+ } 
+
+ } 
+
+#Focus for Plead to the Allies
+focus = { 
+id = BEL_pleadtotheallies
+icon = GFX_goal_support_democracy
+x = 14
+y = 1
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_thegermanquestion } 
+mutually_exclusive = { focus = BEL_befriendgermany } 
+mutually_exclusive = { focus = BEL_befriendtheussr } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+ENG = {
+add_opinion_modifier= { 
+target = BEL
+modifier = medium_increase
+}
+}
+ } 
+
+ } 
+
+#Focus for More Ships!
+focus = { 
+id = BEL_moreships
+icon = GFX_goal_generic_navy_battleship
+x = 21
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_fendofftheuboats } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = dd_tech
+}
+ } 
+
+ } 
+
+#Focus for Soviet Doctrines
+focus = { 
+id = BEL_sovietdoctrines
+icon = GFX_focus_eng_concessions_to_the_trade_unions
+x = 9
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_sovietarmorresearch } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 1.0
+uses = 2 
+category = land_doctrine
+}
+
+
+add_tech_bonus= {
+ bonus = 1.0
+uses = 2 
+category = air_doctrine
+}
+
+add_tech_bonus= {
+ bonus = 1.0
+uses = 2 
+category = naval_doctrine
+}
+ } 
+
+ } 
+
+#Focus for Soviet Armor Research
+focus = { 
+id = BEL_sovietarmorresearch
+icon = GFX_focus_NZL_bob_semple_tank
+x = 9
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_limitedsovietmilitaryimports } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.75
+uses = 6
+category = armor
+}
+ } 
+
+ } 
+
+#Focus for New Army Doctrines
+focus = { 
+id = BEL_newarmydoctrines
+icon = GFX_focus_hol_the_foundations_of_defense
+x = 5
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_newinfantryequipment } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.75
+uses = 2 
+category = land_doctrine
+}
+ } 
+
+ } 
+
+#Focus for Copy the Luftwaffe
+focus = { 
+id = BEL_copytheluftwaffe
+icon = GFX_goal_generic_air_fighter2
+x = 1
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_recruitmentpropaganda } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = medium_air
+}
+ } 
+
+ } 
+
+#Focus for Our Neighbors
+focus = { 
+id = BEL_ourneighbors
+icon = GFX_focus_usa_focus_on_europe
+x = 7
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_fortifyenemyborders focus = BEL_limitedsovietmilitaryimports } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power= 200
+ } 
+
+ } 
+
+#Focus for War with our Neighbors!
+focus = { 
+id = BEL_warwithourneighbors
+icon = GFX_goal_generic_military_deal
+x = 7
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_ourneighbors } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+create_wargoal= { 
+type = annex_everything 
+target = LUX
+}
+create_wargoal= { 
+type = annex_everything 
+target = HOL
+}
+ } 
+
+ } 
+
+#Focus for Improved Roads
+focus = { 
+id = BEL_improvedroads
+icon = GFX_goal_generic_construct_infrastructure
+x = 11
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_morefactories } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+6 = {
+add_building_construction= { 
+type = infastructure 
+level = 10
+instant_build = yes }
+}
+
+34 = {
+add_building_construction= { 
+type = infastructure 
+level = 10
+instant_build = yes }
+}
+ } 
+
+ } 
+
+#Focus for Limited Soviet Military Imports
+focus = { 
+id = BEL_limitedsovietmilitaryimports
+icon = GFX_focus_generic_combined_arms
+x = 9
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_jointhecomintern } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_manpower= 50000
+ } 
+
+ } 
+
+#Focus for Five Year Plan
+focus = { 
+id = BEL_fiveyearplan
+icon = GFX_goal_generic_soviet_construction
+x = 11
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_jointhecomintern } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability= 0.05
+add_offsite_building= { type = industrial_complex level = 2 }
+ } 
+
+ } 
+
+#Focus for Befriend the USSR
+focus = { 
+id = BEL_befriendtheussr
+icon = GFX_goal_support_communism
+x = 10
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_thegermanquestion } 
+mutually_exclusive = { focus = BEL_pleadtotheallies } 
+mutually_exclusive = { focus = BEL_befriendgermany } 
+mutually_exclusive = { focus = BEL_ } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+SOV = {
+add_opinion_modifier= { 
+target = BEL
+modifier = large_increase 
+}
+}
+ } 
+
+ } 
+
+#Focus for The Colony Question
+focus = { 
+id = BEL_thecolonyquestion
+icon = GFX_goal_generic_propaganda
+x = 25
+y = 0
+cost = 2
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power= 50
+ } 
+
+ } 
+
+#Focus for More Factories
+focus = { 
+id = BEL_morefactories
+icon = GFX_goal_continuous_repairments
+x = 11
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_fiveyearplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_offsite_building= { type = arms_factory level = 1 }
+add_offsite_building= { type = industrial_complex level = 1 }
+ } 
+
+ } 
+
+#End of focuses 
+ }
